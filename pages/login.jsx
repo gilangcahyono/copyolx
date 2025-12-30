@@ -15,11 +15,6 @@ const Login = () => {
     router.push("/");
   };
 
-  const data = {
-    nama: "John Doe",
-    username: "johndoe",
-  };
-
   return (
     <AuthLayout>
       <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
