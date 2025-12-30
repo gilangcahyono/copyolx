@@ -52,12 +52,6 @@ const Login = () => {
 
 export default Login;
 
-export const getStaticProps = async () => {
-  return {
-    props: {},
-  };
-};
-
 export const getStaticPaths = async () => {
   return {
     paths: [],
