@@ -15,6 +15,10 @@ const Login = () => {
     router.push("/");
   };
 
+  const lihat = () => {
+    alert("Username : " + username + "\nPassword : " + password);
+  };
+
   return (
     <AuthLayout>
       <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
