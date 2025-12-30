@@ -19,7 +19,7 @@ const Login = () => {
     <AuthLayout>
       <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
         <h1 className="text-center text-2xl font-bold">
-          Login to your account
+          Login to your account from google
         </h1>
         <Input
           type="text"
@@ -51,9 +51,3 @@ const Login = () => {
 };
 
 export default Login;
-
-export const getStaticProps = async () => {
-  return {
-    props: {},
-  };
-};
