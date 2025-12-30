@@ -15,11 +15,6 @@ const Login = () => {
     router.push("/");
   };
 
-  const data = {
-    nama: "John Doe",
-    username: "johndoe",
-  };
-
   const lihat = () => {
     alert("Username : " + username + "\nPassword : " + password);
   };
