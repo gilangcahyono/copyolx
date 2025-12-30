@@ -1,5 +1,5 @@
 const Index = () => {
-  return <div>Gilang Index</div>;
+  return <div>Index Farhan</div>;
 };
 
 export default Index;
