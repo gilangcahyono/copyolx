@@ -2,21 +2,18 @@ import AuthLayout from "@/components/layout/AuthLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 const Login = () => {
-  const [inputs, setInputs] = useState({});
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    router.push("/");
   };
-
-  console.log(inputs.username);
 
   return (
     <AuthLayout>
@@ -26,12 +23,21 @@ const Login = () => {
         </h1>
         <Input
           type="text"
+          required
           placeholder="Username"
           name="username"
-          value={inputs.username}
-          onChange={handleChange}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
-        <Input type="password" placeholder="Password" minLength={6} />
+        <Input
+          type="password"
+          required
+          placeholder="Password"
+          minLength={6}
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <Button type="sub">Login</Button>
         <span className="text-sm">
           Don&apos;t have an account ?{" "}
