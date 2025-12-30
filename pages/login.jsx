@@ -19,7 +19,7 @@ const Login = () => {
     <AuthLayout>
       <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
         <h1 className="text-center text-2xl font-bold">
-          Login to your account from google
+          Login to your account in this web
         </h1>
         <Input
           type="text"
